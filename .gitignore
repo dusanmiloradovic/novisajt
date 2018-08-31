@@ -5,3 +5,4 @@
 *.PNG
 node_modules/
 slk/
+build/

@@ -3,7 +3,8 @@ let backgroundCaptions = [
   "LIGHT WAWES",
   "MAP OF LOST THINGS",
   "CONSTELLATION",
-  "THE IMPACT"
+  "THE IMPACT",
+  "MEMORIES"
 ];
 
 export default backgroundCaptions;

@@ -8,6 +8,7 @@ import news from "./whatsnew.js";
 import styles from "./scss/variables.scss";
 import "./fonts/bebas_neue/stylesheet.css";
 import backgroundCaptions from "./image_info/background_images.js";
+import ciklusi from "./image_info/ciklusi.js";
 
 const filesList = styles.filesList.split(" ");
 
@@ -126,6 +127,18 @@ class Menu extends Component {
 
 class Pregled extends Component {
   //umesto galerije, pregled ce da bude obican  div sa slikama, i veliom marginom, da bi postigli istu iluziju
+  render() {
+    let slike = ciklusi[this.props.ciklus];
+    let sl = slike.map(s => {
+      let im = hiRes(s.fajl);
+      return (
+        <div class="img-ciklus">
+          <img {...im} />
+        </div>
+      );
+    });
+    return <div class="ciklus-pregled">{sl}</div>;
+  }
 }
 
 window.addEventListener("load", _ => {
