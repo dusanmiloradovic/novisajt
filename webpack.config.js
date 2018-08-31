@@ -1,5 +1,6 @@
 var path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ImageminPlugin = require("imagemin-webpack-plugin").default;
 
 module.exports = {
   // entry file - starting point for the app
@@ -11,7 +12,10 @@ module.exports = {
     filename: "bundle.js",
     publicPath: "/"
   },
-  plugins: [new HtmlWebpackPlugin({ template: "src/template.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "src/template.html" }),
+    new ImageminPlugin({ test: /\.(png|jpg|gif)$/ })
+  ],
   module: {
     rules: [
       {
@@ -27,13 +31,23 @@ module.exports = {
         }
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.(gif|woff|woff2)$/,
         use: [
           {
             loader: "file-loader",
             options: {}
           }
         ]
+      },
+      {
+        test: /\.(jpe?g|png)$/i,
+        loader: "responsive-loader",
+        options: {
+          sizes: [300, 600, 1200, 2000],
+          //   placeholder: true,
+          //          placeholderSize: 100,
+          adapter: require("responsive-loader/sharp")
+        }
       },
       {
         test: /\.css$/,

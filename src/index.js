@@ -24,22 +24,14 @@ for (let j = 0; j < loadedBGImages.length; j++) {
 }
 
 const hiRes = require.context("../slk/height1024", true);
-const medRes = require.context("../slk/height700", true);
-const lowRes = require.context("../slk/height500", true);
-
-const choosenRes = !window.screen
-  ? hiRes
-  : window.screen.width > 1600
-    ? hiRes
-    : window.screen.width < 700
-      ? lowRes
-      : medRes;
 
 const preloadImage = ind => {
   return new Promise((resolve, reject) => {
     let img = new Image();
     let pth = "./" + filesList[ind] + ".jpg";
-    img.src = choosenRes(pth);
+    img.src = hiRes(pth).src; //resposive loader treba da o ovome vodi racuna
+    img.srcset = hiRes(pth).srcSet;
+    img.srcSet = hiRes(pth).srcSet;
     img.onload = () => {
       loadedBGImages[ind] = true;
       resolve("loaded");
@@ -123,12 +115,17 @@ class Menu extends Component {
   timeoutloop() {
     if (!MOBILE) return;
     setTimeout(_ => {
-      let newCounter = this.state.imageCounter + 1;
+      let newCounter = this.state.tekucaPozadina + 1;
+      if (newCounter == filesList.length) newCounter = 0;
       loadBackground(newCounter);
-      this.setState({ imageCounter: newCounter });
+      this.setState({ tekucaPozadina: newCounter });
       this.timeoutloop();
     }, LOAD_AFTER);
   }
+}
+
+class Pregled extends Component {
+  //umesto galerije, pregled ce da bude obican  div sa slikama, i veliom marginom, da bi postigli istu iluziju
 }
 
 window.addEventListener("load", _ => {
