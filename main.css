@@ -1,0 +1,56 @@
+html, body, .gallery, #galerija{
+    width:100%;
+    height:100%;
+    font-family: 'Poiret One', 'Noto Serif', serif;
+    overflow:hidden;
+}
+
+html{
+    background: url(slk/responsive2.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.logoandmenu{
+    color:white;
+    min-width:20%;
+    position:absolute;
+
+    right:5%;
+    bottom:2%;
+    text-align:right;
+}
+
+.menu{
+    margin-top:15%;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+.logo{
+    font-size:60px;
+    letter-spacing:2px;
+}
+
+
+.menu ul{
+    font-size:50px;
+    list-style-type: none;
+    padding:0px;
+    margin:0px;
+}
+
+@media (max-width:800px){
+    .menu ul{
+	font-size:40px;
+    }
+
+    .logo{
+	font-size:50px;
+    }
+}

@@ -1,0 +1,188 @@
+import { h, render, Component } from "preact";
+
+export class Slajder extends Component {
+  constructor() {
+    super();
+    this.state = {
+      tekuca: 0,
+      slajding: false,
+      touchdevice: false,
+      open: false,
+      loadFinish: false //kada se ucita cela stranica, tek tada pocni da ucitavas velike slike
+    };
+    let f = e => {
+      this.setState({ touchdevice: true });
+      window.removeEventListener("touchstart", f);
+      this.startSlajdTouch(e);
+    };
+
+    if (!this.state.touchdevice) {
+      window.addEventListener("touchstart", f);
+    }
+
+    promLoaded.then(_ => {
+      this.setState({ loadFinish: true });
+    });
+  }
+  render() {
+    let thumbfolder = "../slk/thumb";
+    let srcfolder = "../slk/width320";
+    let breakpoints = ["1300w", "1024w", "800w", "320w"];
+    let srcsetfolders = [
+      "../slk/height1024",
+      "../slk/height700",
+      "../slk/height500",
+      "../slk/width320"
+    ];
+
+    let gal = this.props.slike.map((s, i) => {
+      let delta = 0;
+      if (this.state.slajding) {
+        delta = (this.state.tekX - this.state.pocX) / window.innerWidth;
+      }
+      let curr = (i - this.state.tekuca + delta) * 100;
+      let stl = "transform:translate3d(" + curr + "%,0,0)";
+
+      return (
+        <div class="page" style={stl} key={"sporaslika-" + i} data-pic-ix={i}>
+          <ResponsiveSlika
+            rasiri={true}
+            loadbig={this.state.loadFinish}
+            srcfolder={srcfolder}
+            thumbfolder={thumbfolder}
+            srcsetfolders={srcsetfolders}
+            breakpoints={breakpoints}
+            fileName={s.fileName}
+          />
+        </div>
+      );
+    });
+
+    let evb = this.state.touchdevice
+      ? {
+          ontouchstart: this.startSlajdTouch,
+          ontouchmove: this.slajdiranjeTouch,
+          ontouchend: this.gotovSlajdTouch
+        }
+      : {
+          onmousedown: this.startSlajd,
+          onmousemove: this.slajdiranje,
+          onmouseup: this.gotovSlajd
+        };
+
+    let leftArrow =
+      this.state.tekuca == 0 ? (
+        <div />
+      ) : (
+        <a key="left-arrow" class="arrowleft" onclick={this.moveLeft} href="#">
+          <span />
+        </a>
+      );
+    let rightArrow =
+      this.state.tekuca == this.props.slike.length - 1 ? (
+        <div />
+      ) : (
+        <a
+          key="right-arrow"
+          class="arrowright"
+          onclick={this.moveRight}
+          href="#"
+        >
+          <span />
+        </a>
+      );
+
+    let sl = this.props.slike[this.state.tekuca];
+    let tekuciLabel = sl.title ? sl.title : sl.fileName;
+
+    let galleryClass = this.state.open ? "gallery" : "gallery closed";
+    let zat = this.state.open ? (
+      <a key="zatvori" class="zatvori" href="#" onclick={this.close}>
+        X
+      </a>
+    ) : (
+      <div />
+    );
+    return (
+      <div class={galleryClass} {...evb}>
+        {leftArrow}
+        {gal}
+        {rightArrow}
+        {zat}
+        <div class="label">
+          <pre>{tekuciLabel}</pre>
+        </div>
+        ;
+      </div>
+    );
+  }
+
+  moveRight = () => {
+    if (this.state.tekuca == this.props.slike.length - 1) {
+      return;
+    }
+
+    this.setState({ tekuca: this.state.tekuca + 1 });
+  };
+
+  moveLeft = () => {
+    if (this.state.tekuca == 0) {
+      return;
+    }
+    this.setState({ tekuca: this.state.tekuca - 1 });
+  };
+
+  close = () => {
+    this.setState({ open: false });
+  };
+
+  open() {
+    this.setState({ open: true });
+  }
+
+  openFrom(n) {
+    this.setState({ tekuca: n, open: true });
+  }
+
+  startSlajdTouch = e => {
+    this.startSlajd(e.touches[0]);
+  };
+
+  slajdiranjeTouch = e => {
+    this.slajdiranje(e.touches[0]);
+  };
+
+  gotovSlajdTouch = e => {
+    this.gotovSlajd(e.touches[0]);
+  };
+
+  startSlajd = e => {
+    this.setState({ slajding: true, pocX: e.clientX, tekX: e.clientX });
+  };
+
+  slajdiranje = e => {
+    if (!this.state.slajding) {
+      return;
+    }
+    this.setState({ tekX: e.clientX });
+  };
+
+  gotovSlajd = e => {
+    if (!this.state.slajding) {
+      return;
+    }
+
+    this.setState({ slajding: false });
+    let pomeraj = this.state.tekX - this.state.pocX;
+
+    if (Math.abs(pomeraj) < window.innerWidth / 3) {
+      return;
+    }
+
+    if (pomeraj < 0) {
+      this.moveRight();
+    } else {
+      this.moveLeft();
+    }
+  };
+}

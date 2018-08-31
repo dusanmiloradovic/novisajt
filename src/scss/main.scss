@@ -1,0 +1,32 @@
+.menu{
+    margin-top:13%;
+    font-family:bebas_neueregular;
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    margin-bottom:10%;
+    margin-right:7%;
+    
+    
+
+    ul{
+	font-size:18px;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+	line-height:42px;
+	a{
+	    text-decoration:none;
+	    color:rgb(152, 152, 152);
+
+	    &.selected{
+		color:rgb(235, 235, 235);
+	/*	font-size:20px;*/
+	    }
+	}
+	@media(max-width:800px){
+	    font-size:25px;
+	}
+	
+    }
+}

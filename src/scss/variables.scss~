@@ -1,0 +1,5 @@
+$files-list: background-a background-b background-c background-d;
+
+:export{
+    filesList:$files-list
+}

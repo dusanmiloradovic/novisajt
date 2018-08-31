@@ -1,0 +1,18 @@
+@import "variables.scss";
+
+@each $bg in $files-list{
+    $i:index($files-list, $bg);
+    .main-bg-#{$i}{
+	background: url(../../slk/#{$bg}.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	.thumb{
+	    background: url(../../slk/#{$bg}-thumb.jpg) no-repeat center center fixed; 
+	}
+    }
+
+    
+}
+
