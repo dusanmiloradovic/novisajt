@@ -43,6 +43,7 @@ module.exports = {
           quality: 40,
           //   placeholder: true,
           //          placeholderSize: 100,
+          //          disable: true,
           adapter: require("responsive-loader/sharp")
         }
       },

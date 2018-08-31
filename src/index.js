@@ -102,6 +102,7 @@ class Menu extends Component {
           class={ind == this.state.tekucaPozadina ? "selected" : ""}
           href="#"
           id={"background-" + ind}
+          onClick={ev => this.props.zoviFunkciju(ind)}
         >
           {c}
         </a>
@@ -130,10 +131,11 @@ class Pregled extends Component {
   render() {
     let slike = ciklusi[this.props.ciklus];
     let sl = slike.map(s => {
-      let im = hiRes(s.fajl);
+      let im = hiRes("./" + s.fajl);
+
       return (
         <div class="img-ciklus">
-          <img {...im} />
+          <img srcSet={im.srcSet} src={im.images[im.images.length - 1].path} />
         </div>
       );
     });
@@ -141,7 +143,29 @@ class Pregled extends Component {
   }
 }
 
+class App extends Component {
+  constructor() {
+    super();
+    this.state = { aktivniCiklus: -1 };
+  }
+
+  render() {
+    let st =
+      this.state.aktivniCiklus != -1 ? (
+        <Pregled ciklus={this.state.aktivniCiklus} />
+      ) : (
+        <div />
+      );
+    return (
+      <div>
+        <Menu zoviFunkciju={x => this.setState({ aktivniCiklus: x })} />
+        {st}
+      </div>
+    );
+  }
+}
+
 window.addEventListener("load", _ => {
   let st = document.getElementById("root");
-  render(<Menu />, st);
+  render(<App />, st);
 });

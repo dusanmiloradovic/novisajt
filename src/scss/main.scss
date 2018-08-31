@@ -1,7 +1,7 @@
 .menu{
     margin-top:13%;
     font-family:bebas_neueregular;
-    position:absolute;
+    position:fixed;
     bottom:0px;
     right:0px;
     margin-bottom:10%;
@@ -29,4 +29,23 @@
 	}
 	
     }
+}
+
+.ciklus-pregled{
+    margin-bottom:101vh;
+    background-color:rgba(0, 0, 0,0.8);
+
+    .img-ciklus{
+	margin-bottom:10%;
+	img{
+	    max-width:100%;
+	    max-height:auto;
+	}
+	
+    }
+}
+
+body{
+    margin:0px;
+    padding:0px;
 }
