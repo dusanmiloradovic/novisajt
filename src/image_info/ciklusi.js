@@ -44,13 +44,13 @@ let ciklusi = [
   [
     { fajl: "3/DSC_0112.jpg" },
     { fajl: "3/DSC_0129.jpg" },
-    { fajl: "3/DSC_5584.JPG" },
+    { fajl: "3/DSC_5584.jpg" },
     { fajl: "3/FINAL__JAY4654.jpg" },
     { fajl: "3/_JAY4662.jpg" },
     { fajl: "3/RS-Mar-13-2018-4480.jpg" }
   ],
   [
-    { fajl: "4/DSC_0357 obradjeni1-bela pozadina.jpg" },
+    { fajl: "4/DSC_0357-obradjeni1-bela-pozadina.jpg" },
     { fajl: "4/RS-Mar-07-2018-4236.jpg" },
     { fajl: "4/RS-Mar-07-2018-4236.jpg" },
     { fajl: "4/RS-Mar-11-2018-4379.jpg" }
@@ -62,13 +62,13 @@ let ciklusi = [
   ],
   [{ fajl: "6/_JAY5871©JayAlonzo-Screen.jpg" }],
   [
-    { fajl: "7/DSC_4447-.JPG" },
-    { fajl: "7/DSC_4500.JPG" },
-    { fajl: -"7/RS-Mar-07-2018-4230.jpg" },
-    { fajl: -"7/RS-Mar-07-2018-4239.jpg" },
-    { fajl: -"7/RS-Mar-07-2018-4239-Lowres-Sampler.jpg" },
-    { fajl: -"7/RS-Mar-11-2018-4355.jpg" },
-    { fajl: -"7/RS-Mar-11-2018-4398.jpg" },
+    { fajl: "7/DSC_4447-.jpg" },
+    { fajl: "7/DSC_4500.jpg" },
+    { fajl: "7/RS-Mar-07-2018-4230.jpg" },
+    { fajl: "7/RS-Mar-07-2018-4239.jpg" },
+    { fajl: "7/RS-Mar-07-2018-4239-Lowres-Sampler.jpg" },
+    { fajl: "7/RS-Mar-11-2018-4355.jpg" },
+    { fajl: "7/RS-Mar-11-2018-4398.jpg" },
     { fajl: "7/RS-Mar-13-2018-4460-Lowres.jpg" }
   ]
 ];

@@ -90,6 +90,11 @@
 
     .img-ciklus{
 	margin-bottom:10%;
+	width:80%;
+	margin:auto;
+	@media (max-width:1024px){
+	    width:100%;
+	}
 	img{
 	    max-width:100%;
 	    max-height:auto;
