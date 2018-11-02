@@ -10,7 +10,8 @@ import "./fonts/bebas_neue/stylesheet.css";
 import backgroundCaptions from "./image_info/background_images.js";
 
 import { GornjiMeni } from "./components/GornjiMeni.js";
-import { Menu } from "./componnts/Menu.js";
+import { Menu } from "./components/Menu.js";
+import { Pregled } from "./components/Pregled.js";
 import {
   preloadImage,
   loadBackground,
@@ -39,6 +40,7 @@ class App extends Component {
       );
     return (
       <div>
+        <GornjiMeni />
         <Menu zoviFunkciju={x => this.setState({ aktivniCiklus: x })} />
         {st}
       </div>

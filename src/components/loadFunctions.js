@@ -1,11 +1,11 @@
-import styles from "./scss/variables.scss";
+import styles from "./../scss/variables.scss";
 export const filesList = styles.filesList.split(" ");
 
 //this will be the index of the background image to be displayed to the user. On the desktop, when the user hovers, the image will be changed. On mobile every 10 secs.
 
 console.log(filesList);
 
-export const hiRes = require.context("../slk/height1024", true);
+export const hiRes = require.context("../../slk/height1024", true);
 
 let currBackground = 0;
 let currBackgroundClass = null;
