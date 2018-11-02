@@ -1,8 +1,12 @@
 import { h, render, Component } from "preact";
 import ResponsiveMenu from "react-responsive-navbar";
-import { FaBars, FaClose } from "react-icons/fa";
+//import { FaBars, FaClose } from "react-icons/fa";
+import { Modal } from "./Modal.js";
+import { WhatsNew } from "./WhatsNew.js";
 
-console.log(ResponsiveMenu);
+import contact from "../contact.txt";
+import bio from "../bio.txt";
+import news from "../whatsnew.js";
 
 export class GornjiMeni extends Component {
   render() {
@@ -11,36 +15,48 @@ export class GornjiMeni extends Component {
       <div class="respmenu">
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="#" onClick={_ => window["bio"].open()}>
+              Bio
+            </a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#" onClick={_ => window["contact"].open()}>
+              Contact
+            </a>
           </li>
           <li>
-            <a href="">Team</a>
-          </li>
-          <li>
-            <a href="">Contact</a>
-          </li>
-          <li>
-            <a href="">News</a>
+            <a href="#" onClick={_ => window["whatsnew"].open()}>
+              News
+            </a>
           </li>
         </ul>
       </div>
     );
 
-    let mnuOpenButton = <FaBars size={30} />;
-    let mnuCloseButton = <FaClose size={30} />;
+    //  let mnuOpenButton = <FaBars size={30} />;
+    //let mnuCloseButton = <FaClose size={30} />;
+    let mnuOpenButton = <div>&#x2630;</div>;
+    let mnuCloseButton = <div>X</div>;
 
     return (
-      <ResponsiveMenu
-        menuOpenButton={mnuOpenButton}
-        menuCloseButton={mnuCloseButton}
-        changeMenuOn="500px"
-        largeMenuClassName="large-menu"
-        smallMenuClassName="small-menu"
-        menu={mnu}
-      />
+      <div>
+        <ResponsiveMenu
+          menuOpenButton={mnuOpenButton}
+          menuCloseButton={mnuCloseButton}
+          changeMenuOn="500px"
+          largeMenuClassName="large-menu"
+          smallMenuClassName="small-menu"
+          menu={mnu}
+        />
+        <Modal wide ref={bio => (window["bio"] = bio)}>
+          {bio}
+        </Modal>
+        <Modal ref={contact => (window["contact"] = contact)}>{contact}</Modal>
+        <WhatsNew
+          news={news}
+          ref={whatsnew => (window["whatsnew"] = whatsnew)}
+        />
+      </div>
     );
   }
 }
