@@ -3,7 +3,7 @@
 @each $bg in $files-list{
     $i:index($files-list, $bg);
     .main-bg-#{$i}{
-	background: url(../../slk/height1024/#{$bg}.jpg?size=2000) no-repeat center center fixed; 
+	background: url(../../slk/finalno/#{$bg}.jpg?size=2000) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -12,7 +12,7 @@
 
 	
 	@media(max-width:1200px){
-	    background: url(../../slk/height1024/#{$bg}.jpg?size=1200) no-repeat center center fixed;
+	    background: url(../../slk/finalno/#{$bg}.jpg?size=1200) no-repeat center center fixed;
 	    -webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -20,7 +20,7 @@
 	}
 
 	@media(max-width:600px){
-	    background: url(../../slk/height1024/#{$bg}.jpg?size=600) no-repeat center center fixed;
+	    background: url(../../slk/finalno/#{$bg}.jpg?size=600) no-repeat center center fixed;
  	    -webkit-background-size: cover;
 	    -moz-background-size: cover;
 	    -o-background-size: cover;
@@ -28,7 +28,7 @@
 	}
 
 	.thumb{
-	    background: url(../../slk/height1024/#{$bg}.jpg?size=300) no-repeat center center fixed; 
+	    background: url(../../slk/finalno/#{$bg}.jpg?size=300) no-repeat center center fixed; 
 	}
 
     }

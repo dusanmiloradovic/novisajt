@@ -1,9 +1,12 @@
 import { h, render, Component } from "preact";
-import { ResponsiveMenu } from "react-responsive-navbar";
+import ResponsiveMenu from "react-responsive-navbar";
 import { FaBars, FaClose } from "react-icons/fa";
+
+console.log(ResponsiveMenu);
 
 export class GornjiMeni extends Component {
   render() {
+    console.log("zovem render gornjeg menija");
     let mnu = (
       <div class="respmenu">
         <ul>

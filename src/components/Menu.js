@@ -5,19 +5,15 @@ import { loadBackground, filesList } from "./loadFunctions.js";
 const MOBILE = "ontouchstart" in document.documentElement;
 const LOAD_AFTER = 5000;
 
-console.log("bla");
-
 export class Menu extends Component {
   constructor() {
     super();
-    console.log("truc");
     this.state = {
       tekucaPozadina: 0
     };
     this.timeoutloop();
   }
   render() {
-    console.log("zovem render menija");
     let links = backgroundCaptions.map((c, ind) => (
       <li
         onMouseEnter={ev => {
@@ -35,8 +31,6 @@ export class Menu extends Component {
         </a>
       </li>
     ));
-    console.log(links);
-    console.log("menu");
     return (
       <div class="menu">
         <ul>{links}</ul>

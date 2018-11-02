@@ -5,7 +5,7 @@ export const filesList = styles.filesList.split(" ");
 
 console.log(filesList);
 
-export const hiRes = require.context("../../slk/height1024", true);
+export const hiRes = require.context("../../slk/finalno", true);
 
 let currBackground = 0;
 let currBackgroundClass = null;
