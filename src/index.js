@@ -115,7 +115,7 @@ class Menu extends Component {
     );
   }
   timeoutloop() {
-    if (!MOBILE) return;
+    //    if (!MOBILE) return;
     setTimeout(_ => {
       let newCounter = this.state.tekucaPozadina + 1;
       if (newCounter == filesList.length) newCounter = 0;
