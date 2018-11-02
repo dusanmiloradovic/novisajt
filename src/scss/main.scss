@@ -48,14 +48,14 @@
     right:0;
     top:0;
     bottom:0;
-    .closed{
+    &.closed{
 	display:none;
     }
-    .thumbs{
+    &.thumbs{
 	overflow-y:auto;
 	z-index:2;
     }
-    .card{
+    &.card{
 	overflow-y:auto;
 	z-index:2;
 	font-size:20px;
@@ -71,16 +71,16 @@
     /* top: 0px; */
     /* height: 400px; */
     /* height: 100%; */
-    .fit{
+    &.fit{
 	vertical-align: middle;
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
     }
-    .wide{
+    &.wide{
 	max-width:65%;
     }
-    pre{
+    &pre{
 	white-space:pre-wrap;
 	word-wrap: break-word;
     }
