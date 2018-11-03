@@ -238,3 +238,72 @@ pre {
     object-fit:contain;
     width:100%;
 }
+
+
+.arrowright, .arrowleft, .zatvori{
+    display: block;
+    width: 40px;
+    position: absolute;
+    z-index: 1;
+}
+
+.arrowright span, .zatvori span:after{
+    border-top: 3px solid white;
+    border-right: 3px solid white;
+    right: 50%;
+}
+
+.arrowleft span, .zatvori span:before{
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    right: 50%;
+}
+
+.zatvori, .zatvorigal{
+    height: 40px;
+/*    top: 20px;*/
+    /*    right: 20px;*/
+    top:0px;
+    right:0px;
+    text-decoration:none;
+    color:white;
+    font-size:30px;
+    font-family:monospace;
+    position:fixed;
+    z-index:3;
+}
+
+.zatvorigal{
+    right:30px;
+    top:10px;
+}
+
+
+
+.zatvorigal.closed{
+    display:none;
+}
+
+.zatvori span:before, .zatvori span:after{
+    width: 6px;
+    height: 6px;
+    margin-top: -4px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.arrowleft span, .arrowright span, .zatvori span:before, .zatvori span:after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: -5px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
