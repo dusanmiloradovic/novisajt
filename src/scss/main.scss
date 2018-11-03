@@ -33,9 +33,7 @@
     }
 }
 
-.small-menu-2{
-    text-align:right;
-}
+
 
 .gallery{
     -webkit-transform: translate3d(0, 0, 0);
@@ -76,9 +74,16 @@
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	@media(max-width:800px){
+	    max-width:90%;
+	    font-size:18px;
+	}
     }
     &.wide{
 	max-width:65%;
+	@media(max-width:800px){
+	    max-width:90%;
+	}
     }
     &pre{
 	white-space:pre-wrap;
@@ -100,7 +105,7 @@
 	bottom:0px;
 	right:0px;
 	left:0px;
-	background:white;
+	background:black;
 	text-align:center;
 	margin-right:0px;
 	z-index:10;
@@ -123,6 +128,8 @@
 	}
 	@media (max-width: 500px) {
 	    padding: 10px 0;
+	    margin-top:30vh;
+
 	    li {
 		padding: 10px 0;
 		display: block;
@@ -284,4 +291,13 @@ pre {
     right:3%;
     z-index:1;
     color:#989898;
+}
+
+.small-menu{
+    position:fixed;
+    top:1em;
+    right:1em;
+    z-index:1;
+    color:#989898;
+    text-align:right;
 }

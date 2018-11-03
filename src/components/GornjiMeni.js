@@ -15,17 +15,35 @@ export class GornjiMeni extends Component {
       <div class="respmenu">
         <ul>
           <li>
-            <a href="#" onClick={_ => window["bio"].open()}>
+            <a
+              href="#"
+              onClick={_ => {
+                this.rm.setState({ showMenu: false });
+                window["bio"].open();
+              }}
+            >
               Bio
             </a>
           </li>
           <li>
-            <a href="#" onClick={_ => window["contact"].open()}>
+            <a
+              href="#"
+              onClick={_ => {
+                this.rm.setState({ showMenu: false });
+                window["contact"].open();
+              }}
+            >
               Contact
             </a>
           </li>
           <li>
-            <a href="#" onClick={_ => window["whatsnew"].open()}>
+            <a
+              href="#"
+              onClick={_ => {
+                this.rm.setState({ showMenu: false });
+                window["whatsnew"].open();
+              }}
+            >
               News
             </a>
           </li>
@@ -47,6 +65,7 @@ export class GornjiMeni extends Component {
           largeMenuClassName="large-menu"
           smallMenuClassName="small-menu"
           menu={mnu}
+          ref={m => (this.rm = m)}
         />
         <Modal wide ref={bio => (window["bio"] = bio)}>
           {bio}

@@ -1,4 +1,5 @@
 import { h, render, Component } from "preact";
+import { loadWhatsNew } from "./loadFunctions.js";
 
 export class WhatsNew extends Component {
   constructor() {
@@ -23,6 +24,7 @@ export class WhatsNew extends Component {
     }
     for (let i = 0; i < this.props.news.length; i++) {
       let obj = this.props.news[i];
+      let im = loadWhatsNew("./" + obj[1]);
       rez.push(
         <div>
           <pre>{obj[0]}</pre>
@@ -30,7 +32,7 @@ export class WhatsNew extends Component {
       );
       rez.push(
         <div>
-          <img src={"../../slk/news/" + obj[1]} />
+          <img srcSet={im.srcSet} src={im.src} />
         </div>
       );
     }

@@ -7,6 +7,8 @@ console.log(filesList);
 
 export const hiRes = require.context("../../slk/finalno", true);
 
+export const loadWhatsNew = require.context("../../slk/news", true);
+
 let currBackground = 0;
 let currBackgroundClass = null;
 

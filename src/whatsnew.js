@@ -45,19 +45,19 @@ Andakulova Gallery(previously Alif Gallery), DIFC Dubai
     `Women's Peek Performance Summit Exhibtion
 Anantara Eastern Mangroves, Abu Dhabi
 28 May 2016 `,
-    "13227645_1086419941415894_8962242256747161177_o copy.jpg"
+    "13227645_1086419941415894_8962242256747161177_o-copy.jpg"
   ],
   [
     `XV International Contemporary Mosaic Association Congress
 Palazzo della "Magnifica Thadea", Spilimbergo, Italy
 18 - 22 May 2016 `,
-    "DSC_8124-1 copy.JPG"
+    "DSC_8124-1-copy.jpg"
   ],
   [
     `Ras Al Khaimah Fine Arts Festival
 Ras Al Khaimah Museum
 19 - 25 February 2016 `,
-    "DSC_7219.JPG"
+    "DSC_7219.jpg"
   ]
 ];
 
