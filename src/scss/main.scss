@@ -115,7 +115,7 @@
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: 20px;
-		color: black;
+		color: #989898;
 		&:hover {
 		    color: white;
 		}
@@ -185,11 +185,11 @@ body{
 }
 
 pre {
-	white-space: pre-wrap;       /* Since CSS 2.1 */
-	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-	white-space: -pre-wrap;      /* Opera 4-6 */
-	white-space: -o-pre-wrap;    /* Opera 7 */
-	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 .ruzica{
@@ -198,8 +198,14 @@ pre {
     font-family:bebas_neueregular;
     left:3%;
     letter-spacing:1px;
-  /*  top:10%;*/
+    /*  top:10%;*/
     font-size:18px;
+    margin-block-start:1em;
+    a{
+	text-decoration:none;
+	color:rgb(152, 152, 152);
+	font-size:20px;
+    }
 }
 
 
@@ -225,7 +231,7 @@ pre {
 
 .zatvori, .zatvorigal{
     height: 40px;
-/*    top: 20px;*/
+    /*    top: 20px;*/
     /*    right: 20px;*/
     top:0px;
     right:0px;
@@ -276,6 +282,6 @@ pre {
     position:fixed;
     top:0px;
     right:3%;
-    z-index:100;
+    z-index:1;
     color:#989898;
 }

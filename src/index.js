@@ -40,7 +40,9 @@ class App extends Component {
       );
     return (
       <div>
-        <div class="ruzica">Ruzica Simonic</div>
+        <div onClick={_ => this.setState({ aktivniCiklus: -1 })} class="ruzica">
+          <a href="#">Ruzica Simonic</a>
+        </div>
         <GornjiMeni />
         <Menu zoviFunkciju={x => this.setState({ aktivniCiklus: x })} />
         {st}

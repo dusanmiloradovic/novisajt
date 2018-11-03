@@ -3,7 +3,7 @@ import backgroundCaptions from "./../image_info/background_images.js";
 import { loadBackground, filesList } from "./loadFunctions.js";
 
 const MOBILE = "ontouchstart" in document.documentElement;
-const LOAD_AFTER = 5000;
+const LOAD_AFTER = MOBILE ? 5000 : 10000;
 
 export class Menu extends Component {
   constructor() {
