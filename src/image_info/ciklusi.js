@@ -26,7 +26,11 @@ let ciklusi_staro = [
 ];
 
 let ciklusi = [
-  [{ fajl: "1/RS-Mar-12-2018-4405.jpg" }],
+  [
+    { fajl: "1/RS-Mar-12-2018-4405.jpg" },
+    { fajl: "2/DSC_0042.jpg" },
+    { fajl: "2/DSC_0039.jpg" }
+  ],
   [
     { fajl: "2/RS-Mar-06-2018-4012 copy.jpg" },
     { fajl: "2/RS-Mar-06-2018-4012.jpg" },
@@ -34,12 +38,7 @@ let ciklusi = [
     { fajl: "2/RS-Mar-06-2018-4019.jpg" },
     { fajl: "2/RS-Mar-06-2018-4022.jpg" },
     { fajl: "2/RS-Mar-06-2018-4046.jpg" },
-    { fajl: "2/RS-Mar-06-2018-4051.jpg" },
-    { fajl: "2/RS-Mar-06-2018-4099.jpg" },
-    { fajl: "2/RS-Mar-06-2018-4104.jpg" },
-    { fajl: "2/RS-Mar-06-2018-4110.jpg" },
-    { fajl: "2/RS-Mar-06-2018-4115.jpg" },
-    { fajl: "2/RS-Mar-06-2018-4143.jpg" }
+    { fajl: "2/RS-Mar-06-2018-4051.jpg" }
   ],
   [
     { fajl: "3/DSC_0112.jpg" },
