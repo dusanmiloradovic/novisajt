@@ -25,6 +25,8 @@ let timeoutRun = true;
 loadImages();
 //timeoutLoop(); //stavi samo za mobilni
 
+window.oncontextmenu = () => false;
+
 class App extends Component {
   constructor() {
     super();
