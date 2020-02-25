@@ -17,4 +17,9 @@ export class Pregled extends Component {
     });
     return <div class="ciklus-pregled">{sl}</div>;
   }
+  componentDidUpdate(prevProps) {
+    if (this.props.ciklus != prevProps.ciklus) {
+      ga("send", { hitType: "pageView", page: "/ciklus/" + this.props.ciklus });
+    }
+  }
 }

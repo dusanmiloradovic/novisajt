@@ -20,6 +20,7 @@ export class GornjiMeni extends Component {
               onClick={_ => {
                 this.rm.setState({ showMenu: false });
                 window["bio"].open();
+                ga("send", { hitType: "pageview", page: "/bio", title: "Bio" });
               }}
             >
               Bio
@@ -31,6 +32,11 @@ export class GornjiMeni extends Component {
               onClick={_ => {
                 this.rm.setState({ showMenu: false });
                 window["contact"].open();
+                ga("send", {
+                  hitType: "pageview",
+                  page: "/contact",
+                  title: "Contact"
+                });
               }}
             >
               Contact
@@ -42,6 +48,11 @@ export class GornjiMeni extends Component {
               onClick={_ => {
                 this.rm.setState({ showMenu: false });
                 window["whatsnew"].open();
+                ga("send", {
+                  hitType: "pageview",
+                  page: "/whatsnew",
+                  title: "What's new"
+                });
               }}
             >
               News
