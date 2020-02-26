@@ -20,7 +20,10 @@ export class GornjiMeni extends Component {
               onClick={_ => {
                 this.rm.setState({ showMenu: false });
                 window["bio"].open();
-                ga("send", { hitType: "pageview", page: "/bio", title: "Bio" });
+                gtag("config", "UA-158829596-1", {
+                  page_title: "Bio",
+                  page_path: "/bio"
+                });
               }}
             >
               Bio
@@ -32,10 +35,9 @@ export class GornjiMeni extends Component {
               onClick={_ => {
                 this.rm.setState({ showMenu: false });
                 window["contact"].open();
-                ga("send", {
-                  hitType: "pageview",
-                  page: "/contact",
-                  title: "Contact"
+                gtag("config", "UA-158829596-1", {
+                  page_title: "Contact",
+                  page_path: "/contact"
                 });
               }}
             >
@@ -48,10 +50,9 @@ export class GornjiMeni extends Component {
               onClick={_ => {
                 this.rm.setState({ showMenu: false });
                 window["whatsnew"].open();
-                ga("send", {
-                  hitType: "pageview",
-                  page: "/whatsnew",
-                  title: "What's new"
+                gtag("config", "UA-158829596-1", {
+                  page_title: "What's new",
+                  page_path: "/whatsnew"
                 });
               }}
             >

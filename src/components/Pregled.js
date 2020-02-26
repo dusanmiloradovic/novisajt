@@ -19,7 +19,10 @@ export class Pregled extends Component {
   }
   componentDidUpdate(prevProps) {
     if (this.props.ciklus != prevProps.ciklus) {
-      ga("send", { hitType: "pageView", page: "/ciklus/" + this.props.ciklus });
+      gtag("config", "UA-158829596-1", {
+        page_title: "Ciklus",
+        page_path: "/ciklus/" + this.props.ciklus
+      });
     }
   }
 }
