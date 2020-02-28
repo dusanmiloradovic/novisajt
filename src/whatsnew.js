@@ -4,11 +4,12 @@ let wn = [
 MGallery by Sofitel, The Retreat Palm Dubai
 Nov 2017`,
     "wallofhappiness.jpg"
-  ][
-    (`Mosaic as Contemporary Art
+  ],
+  [
+    `Mosaic as Contemporary Art
 Exhibition place in the National Bank of Serbia
 Nov 2017`,
-    "mozaik_kao_savremena_umetnost_2017.jpg")
+    "mozaik_kao_savremena_umetnost_2017.jpg"
   ],
   [
     `Express yourself in 30x30
