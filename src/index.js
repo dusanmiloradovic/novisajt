@@ -19,9 +19,6 @@ import {
   hiRes
 } from "./components/loadFunctions.js";
 
-let imageCounter = 0;
-let timeoutRun = true;
-
 loadImages();
 //timeoutLoop(); //stavi samo za mobilni
 
