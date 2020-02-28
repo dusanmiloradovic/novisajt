@@ -1,5 +1,29 @@
 let wn = [
   [
+    `Wall of Happiness
+MGallery by Sofitel, The Retreat Palm Dubai
+Nov 2017`,
+    "wallofhappiness.jpg"
+  ][
+    (`Mosaic as Contemporary Art
+Exhibition place in the National Bank of Serbia
+Nov 2017`,
+    "mozaik_kao_savremena_umetnost_2017.jpg")
+  ],
+  [
+    `Express yourself in 30x30
+Marsam Mattar Gallery ,Dubai
+1 - 30 Oct 2017
+`,
+    "express_yourself_in_30x30.jpg"
+  ],
+  [
+    `Design for the senses
+Dubai World Trade Center
+22 - 25 May 2017`,
+    "design_for_the_senses.jpg"
+  ],
+  [
     `SME WORLD SUMMIT ART EXHIBITION
 Jumeirah Beach Hotel, Dubai
 22 Mar 2017 `,
@@ -9,7 +33,7 @@ Jumeirah Beach Hotel, Dubai
     `Collage
 Al Quattara Art Centre, Al Ain
 5 Mar - 18 May 2017 `,
-    "qattara.jpg"
+    "collage_mixed_media.jpg"
   ],
   [
     `Be Bold for Change
