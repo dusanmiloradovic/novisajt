@@ -8,7 +8,7 @@ module.exports = {
   // where to dump the output of a production build
   output: {
     path: path.join(__dirname, "build"),
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     publicPath: "/"
   },
   plugins: [new HtmlWebpackPlugin({ template: "src/template.html" })],
